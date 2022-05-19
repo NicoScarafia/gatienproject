@@ -1,0 +1,36 @@
+
+@mixin noSelect {
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+}
+
+@mixin hoverLink ($hoverColor, $lineHeight) {
+    text-decoration: none;
+    position: relative;
+    
+    
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0; bottom: 0;
+        height: ($lineHeight); width: 100%;
+        background-color: ($hoverColor);
+
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 250ms ease-in;
+    }
+
+    &:hover {
+        color: ($hoverColor);
+    }
+
+    &:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+    }  
+}

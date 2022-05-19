@@ -1,0 +1,14 @@
+footer {
+    background-color: $main-color;
+    min-height: 3rem;
+    display: flex;
+    justify-content: center;    align-items: center;
+    margin-top: 4rem;
+    padding: 1.6rem 0;
+
+    small {
+        color: white;
+        font-weight: 500;
+        font-size: 1rem;
+    }
+}
