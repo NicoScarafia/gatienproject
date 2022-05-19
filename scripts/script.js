@@ -118,3 +118,15 @@ gsap.from('.social-media-text', {
     duration: 1,
     scrollTrigger: '.social-media-text'
 })
+
+
+
+// Contact
+
+gsap.from('.contact-container', {
+    y: -30,
+    ease: 'linear',
+    opacity: 0,
+    duration: 0.6,
+    scrollTrigger: '#contact'
+})
